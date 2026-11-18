@@ -21,7 +21,7 @@ python3.12 -m venv .venv && .venv/bin/pip install -r requirements.lock && .venv/
 # YuNet face model (not in git): scripts/install.sh downloads it and verifies SHA-256 8f2383e4...2fa4
 PYTHONPATH=src .venv/bin/python -m pytest tests -q --ignore=tests/test_clips_e2e.py
 ```
-**The project was developed on macOS (Apple M2). These parts are macOS-specific and need porting for Windows/Linux:**
+**The project was developed on macOS (Apple M2). The owner's PC is Windows + RTX 2070 Super; see section 2b for the exact port plan. These parts are macOS-specific:**
 * Text overlays use `/usr/bin/python3` + Pillow and Arial fonts at `/System/Library/Fonts/...` (`config/ranking_style.json` -> `fonts`), because the local ffmpeg has no text filters. On a PC: point `fonts` at real font files and `renderer_python` at an interpreter with Pillow.
 * On-screen-text OCR is a Swift/Vision helper (`src/clipagent/_ocr.swift`, compiled to `source_library/_tools/ocr2`). Without it OCR reports "unavailable" and clips carry `onscreen_text_unverified` (allowed by the QA gate, but nothing is verified). Needs a replacement (e.g. a local OCR engine).
 * Test fixture generation uses macOS `say` (`tests/fixtures/make_fixture.py`); other OSes need another TTS (the fixture, the e2e test and 3 unit tests skip/need it).
@@ -29,6 +29,34 @@ PYTHONPATH=src .venv/bin/python -m pytest tests -q --ignore=tests/test_clips_e2e
 * `doctor`, some ffmpeg paths (`/opt/homebrew/bin`) assume Homebrew. `h264_videotoolbox` is not used; encoding is `libx264` (works anywhere).
 * faster-whisper runs CPU int8 here. On an NVIDIA PC use CUDA (`device="cuda"`, `float16`) in `models.py` for a large speed-up; `whisper.cpp`/MLX were deferred as upgrades only for Apple Silicon.
 * Storage defaults assume POSIX `shutil.disk_usage`; works on Windows too, but the "no symlink" guard uses `os.path.realpath` (Windows junctions are not covered; review before trusting purge on Windows).
+
+## 2b. Windows + RTX 2070 Super port plan (owner's PC; written 2026-11-18, nothing below is done yet)
+Verified facts are marked (verified); everything else is my inference and must be tested on the PC.
+
+**GPU transcription (the big win).**
+* faster-whisper's GPU path needs **CUDA 12, cuBLAS for CUDA 12 and cuDNN 9** (verified from the faster-whisper README; `ctranslate2` 4.x supports only CUDA 12 / cuDNN 9). On Windows the README points to a libraries archive from `Purfview/whisper-standalone-win` (release tag `libs`) to unpack into a folder on `PATH`. Update the NVIDIA driver first so it supports CUDA 12.
+* Then `WhisperModel(name, device="cuda", compute_type="float16")` (verified API). Today `src/clipagent/models.py` hard-codes `device="cpu", compute_type="int8"`: make device/compute type configurable (e.g. env `CLIPAGENT_DEVICE`, `CLIPAGENT_COMPUTE`) with a CPU fallback.
+* 8 GB VRAM should hold `medium.en` and even `large-v3` in float16 (inference, my estimate: unmeasured). Run the transcript worker and the caption-decode step one at a time on the GPU. Expected speed-up vs the Mac's 0.158x real-time CPU factor is large but **unmeasured**; run `scripts/benchmark.py` on the PC and record it in `docs/benchmarks.json`.
+* Optional: `h264_nvenc` for rendering. Turing has NVENC; keep `libx264` (config/ranking_style.json `video_encode`) as default for the approved look; render time is not the bottleneck.
+
+**Code that will break on Windows (found by grep, verified present):**
+| Where | Problem | Fix |
+|---|---|---|
+| `src/clipagent/service/daemon.py:7,592` | `import fcntl` is POSIX-only: importing the daemon fails on Windows | use `msvcrt.locking` or the `portalocker` package for the single-instance lock |
+| `daemon.py:610` | `signal.SIGTERM` handling differs on Windows | handle `SIGINT`/`SIGBREAK`; run under a service wrapper |
+| `src/clipagent/service/tokens.py` | macOS `security` Keychain CLI | use the `keyring` package (Windows Credential Manager) behind the same `get/set/delete` interface |
+| `src/clipagent/service/launchd.py`, `service/cli.py:111-119` | launchd/plist | Windows Task Scheduler (`schtasks`, "At log on", restart on failure) or a service wrapper such as NSSM; keep the plist generator for the Mac |
+| `config/ranking_style.json:13-15`, `src/clipagent/_pngtext.py`, `doctor.py:41-46` | `/System/Library/Fonts/...` fonts and `/usr/bin/python3` as the Pillow renderer | point `fonts` at `C:\Windows\Fonts\arialbd.ttf` and `ariblk.ttf`; set `renderer_python` to the venv's `python.exe` and `pip install pillow` (the venv has no Pillow today); make `doctor` check `sys.executable` |
+| `src/clipagent/textsafety.py:140-147`, `_ocr.swift` | on-screen-text OCR is a Swift/Vision helper | replace with a Windows OCR (e.g. `winocr`/Windows.Media.Ocr, or Tesseract/RapidOCR). Until then OCR reports unavailable and every clip carries `onscreen_text_unverified` (allowed by QA, but on-screen text is NOT verified: do not rely on it for chat-slur safety) |
+| `tests/fixtures/make_fixture.py:44` | macOS `say` TTS | use `pyttsx3` or PowerShell `System.Speech.Synthesis` to synthesize the fixture speech; `tests/test_clips_e2e.py:15` skip condition |
+| `render.py` (original and `clips/render.py`) concat list files | the ffmpeg concat demuxer treats `\` as an escape: Windows paths in `file '...'` lines break | write `Path.as_posix()` paths (forward slashes) |
+| `doctor.py:31` | Homebrew PATH | `winget install Gyan.FFmpeg` and ensure `ffmpeg`/`ffprobe` are on PATH |
+| `service/storage.py` | symlink guard uses `os.path.realpath`; Windows junctions/reparse points are not detected | add a reparse-point check before trusting purge; keep `dry_run: true` on the PC until the storage tests pass there |
+| file locking | Windows refuses to rename/delete files another process has open (ffmpeg, a player) | retry-with-backoff around `os.replace`/`os.unlink` in storage, and make QA close its handles |
+
+**Probably fine:** PySceneDetect, OpenCV, YuNet (ONNX), NumPy, SQLite WAL, typer, onnxruntime (VAD). `requirements.lock` is a macOS freeze: install `faster-whisper`, `ctranslate2`, `scenedetect`, `opencv-python`, `numpy`, `typer`, `onnxruntime` fresh on Windows and re-freeze to `requirements-windows.lock`.
+
+**Suggested order on the PC:** (1) clone, venv, install; (2) fix the `fcntl` import and fonts/Pillow so the CLI and renderer run; (3) run the unit tests; (4) enable CUDA and run `scripts/benchmark.py`; (5) port the fixture TTS and run the e2e test; (6) port tokens/scheduler/OCR; (7) only then the service. The full Windows port is a real chunk of work; ask me to do it in that order.
 
 ## 3. Decisions made and why
 * **Hybrid architecture**: ffmpeg + faster-whisper + PySceneDetect + OpenCV/YuNet as foundations; editorial logic, passes, QA and renderer are original. Rejected: AGPL clippers (copyleft), unlicensed repos, whisperX/pyannote (torch stack, telemetry, gated tokens), MediaPipe (heavier than YuNet for one job), TransNetV2 (stale; PySceneDetect 0.7 embeds a TransNetV2 detector), PANNs (pinned to torch 1.0.1), ClipsAI (stale since 2024), AI-Youtube-Shorts-Generator (paid cloud API default).
@@ -75,7 +103,7 @@ PYTHONPATH=src .venv/bin/python -m pytest tests -q --ignore=tests/test_clips_e2e
 `tests/test_content.py` intermittently fails with `FAIL av_sync_stream_durations audio/video duration gap 0.135s` (tolerance 0.12 s) on the ranking render. Reproduced on a clean `git archive main` extract (1 in ~10 runs) and on this branch (~5 in ~20). The three tests seen failing: `test_one_failed_render_does_not_stop_the_other_outputs`, `test_dashboard_links_every_finished_video`, `test_used_moments_are_never_planned_again_until_the_user_rejects_the_run` (the last is only *consistent with* the same cause; not proven). The test feeds unseeded `anoisesrc` noise. Candidate fixes (not done): seed the noise in the test; and/or investigate why concatenated AAC audio runs ~0.135 s longer than video in some runs (frame-exact video vs AAC priming/padding), then widen or fix the tolerance deliberately.
 
 ## 8. Open questions for the owner (answer when back)
-1. **PC OS and GPU?** (Windows/Linux, NVIDIA?) Decides the port list in section 2 and whether to switch transcription to CUDA.
+1. ~~PC OS and GPU?~~ **ANSWERED 2026-11-18: Windows PC, NVIDIA RTX 2070 Super (8 GB VRAM).** Port plan in section 2b. Still open: Windows version, RAM, CPU, free disk, and whether the PC will be always-on (the service needs to run continuously).
 2. **TikTok developer app**: does one exist? Which scopes are approved? Is it **audited** for Direct Post? If not, stay on the draft queue (creator posts manually). Do you want me to prepare the audit application notes?
 3. **Visual-safety policy**: the zero-touch gate blocks any clip that only has a metrics-only review. Options: (a) agent review per batch (not zero-touch), (b) plug in a classifier command (`gate.visual_safety.command`), (c) explicitly accept `metrics_only_allowed`. Which?
 4. **Disk**: free space on the PC; keep the 20%/15% rules or adjust?
