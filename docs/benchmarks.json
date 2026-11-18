@@ -1,0 +1,33 @@
+{
+  "machine": "macOS-27.0.1-arm64-arm-64bit",
+  "cpu": "Apple M2",
+  "ram_gb": 8.0,
+  "slice": {
+    "seconds": 600.0,
+    "resolution": "1280x720",
+    "codec": "h264"
+  },
+  "stages": {
+    "visual (PySceneDetect + 4 Hz motion/faces/bars)": {
+      "seconds": 40.5,
+      "rtf": 0.068,
+      "ok": true
+    },
+    "transcript (small.en, word timestamps, VAD)": {
+      "seconds": 95.0,
+      "rtf": 0.158,
+      "ok": true
+    },
+    "audio events (loudness, laughter rhythm, silences)": {
+      "seconds": 0.8,
+      "rtf": 0.0014,
+      "ok": true
+    }
+  },
+  "projection_hours_wall_if_run_serially": {
+    "1 h source": 0.23,
+    "2 h source": 0.45,
+    "4 h source": 0.91
+  },
+  "note": "visual and transcript workers run in parallel in production, so wall time is nearer max(stage) than the sum; render/QA time scales with the number of videos, not source length"
+}

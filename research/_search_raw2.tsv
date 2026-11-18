@@ -1,0 +1,102 @@
+PySceneDetect scene detection	Breakthrough/PySceneDetect	5543	BSD-3-Clause	2026-11-18	Python	false	:movie_camera: Python and OpenCV-based scene cut/transition detection program & library.
+PySceneDetect scene detection	Breakthrough/SceneStats	19	BSD-3-Clause	2019-06-09	-	false	:clapper: [Coming Soon] A C++ and OpenCV-based scene detection program & library.  Will su
+PySceneDetect scene detection	nzeronfourme/MovieShort-AI	18	MIT	2026-09-13	Python	false	Automatic movie clipping for YouTube Shorts. Scene detection, LLM scoring, face tracking, 
+PySceneDetect scene detection	findit-studio/scenesdetect	4	Apache-2.0	2026-11-10	Rust	false	A Rust port of PySceneDetect — scene/shot cut detection built around a Sans-I/O streaming 
+PySceneDetect scene detection	natlrazfx/cutdetective	3	NOASSERTION	2025-12-25	Python	false	Automates the detection of scene cuts in video files. It utilizes the PySceneDetect librar
+PySceneDetect scene detection	A-Amirhassani/Multimedia-Scene-Detection_Project3	1	NONE	2023-04-26	Python	false	A Python-based multimedia project that processes video files to automatically detect scene
+PySceneDetect scene detection	ltdoanhwork/LayoutGeneration	1	NONE	2026-06-30	Jupyter Notebook	false	A modular, production-ready pipeline for automatic keyframe extraction from videos using p
+PySceneDetect scene detection	SimonJolibois/scene-cut-detection	0	NONE	2021-05-27	Python	false	.py using the PySceneDetect API to create a basic framework for a shotlist
+PySceneDetect scene detection	jaideep-sp/scene-cutter	0	NONE	2026-08-10	Python	false	Multi-signal video cut-point detection pipeline — demucs + SileroVAD + OpenCLIP + PySceneD
+PySceneDetect scene detection	GalenErsoFacu/audio-video-analysis-python	0	NONE	2026-10-13	Python	false	Personal Python project exploring audio transcription, video scene detection, and audiovis
+ClipsAI clips	ClipsAI/clipsai	575	MIT	2024-01-17	Python	false	Clips AI is an open-source Python library that automatically converts long videos into cli
+ClipsAI clips	austinwmille/orca	9	GPL-3.0	2025-08-12	Python	false	you feed in a video; it outputs context contained clips resized to 9:16, keeping speaker i
+ClipsAI clips	waterboxdeveloper/CliperAi-	4	NONE	2026-07-21	Python	false	A machine learning-powered CLI tool that integrates WhisperX transcription, ClipsAI's Text
+ClipsAI clips	Guiba2/ClipsForge	4	GPL-3.0	2026-05-23	Python	false	Um projeto que simula alguns Geradores de clips que existem...
+ClipsAI clips	JerielCodes/clipsai2	1	NONE	2025-07-12	Python	false	
+ClipsAI clips	AnshPoison/CLipsai	1	NONE	2025-03-02	Python	false	Clip generating software
+ClipsAI clips	jyoung2000/clipsai-webgui	1	MIT	2025-07-12	Python	false	🎬 ClipsAI Web GUI - AI-powered video transcription, clip finding, and intelligent resizing
+ClipsAI clips	siddeshh/ClipX	1	NONE	2026-01-03	Python	false	Open-source alternative to OpusClip - Transform long-form videos into engaging YouTube Sho
+ClipsAI clips	kevinryann/clipsAI	0	NONE	2021-12-01	CLIPS	false	
+ClipsAI clips	AdegokeMichael/clipsai	0	MIT	2025-10-28	Python	false	
+silero vad voice activity detection	FireRedTeam/FireRedVAD	565	Apache-2.0	2026-05-06	Python	false	A SOTA Industrial-Grade Voice Activity Detection & Audio Event Detection, supporting 100+ 
+silero vad voice activity detection	gkonovalov/android-vad	512	MIT	2025-07-15	C	false	Android Voice Activity Detection (VAD) library. Supports WebRTC VAD GMM, Silero VAD DNN, Y
+silero vad voice activity detection	nyosegawa/speech.cpp	474	MIT	2026-11-15	C++	false	Speech synthesis, speech recognition and voice activity detection for voice conversation, 
+silero vad voice activity detection	xucailiang/cascade	84	MIT	2025-12-22	Python	false	Cascade is a production-ready, high-performance, and low-latency audio stream processing l
+silero vad voice activity detection	helloooideeeeea/RealTimeCutVADLibrary	69	MIT	2026-01-01	Swift	false	A real-time Voice Activity Detection (VAD) library for iOS and macOS using Silero models p
+silero vad voice activity detection	baochuquan/ios-vad	36	NONE	2024-11-14	Swift	false	iOS Voice Activity Detection (VAD). Supports WebRTC VAD GMM, Silero VAD DNN, Yamnet VAD DN
+silero vad voice activity detection	wavekat/wavekat-vad	29	Apache-2.0	2026-08-30	Rust	false	Voice Activity Detection library for Rust with a unified trait interface over multiple bac
+silero vad voice activity detection	agentvoiceresponse/avr-vad	22	MIT	2026-04-13	TypeScript	false	A Node.js library for Voice Activity Detection using the Silero VAD model.
+silero vad voice activity detection	second-state/silero_vad_server	17	GPL-3.0	2025-12-06	Rust	false	VAD (Voice Activity Detection) as a service, written in Rust
+silero vad voice activity detection	VoxRT/voxrt-silero-android	17	Apache-2.0	2026-09-15	Kotlin	false	On device streaming voice activity detection (Silero VAD v5) for Android. ~424 KB native b
+audio tagging AudioSet	qiuqiangkong/audioset_tagging_cnn	1800	MIT	2024-07-25	Python	false	
+audio tagging AudioSet	fschmid56/EfficientAT	377	MIT	2024-11-20	Python	false	This repository aims at providing efficient CNNs for Audio Tagging. We provide AudioSet pr
+audio tagging AudioSet	lijuncheng16/AudioTaggingDoneRight	43	NOASSERTION	2023-07-22	Jupyter Notebook	false	experiments about AudioSet
+audio tagging AudioSet	faviasono/audio-event-tagging	1	MIT	2020-12-11	Jupyter Notebook	false	Build and analyzed models to classify audio into speech, music, nature sounds etc from Goo
+audio tagging AudioSet	nikola-j/audio_tag	1	NONE	2019-04-30	Python	false	Automatic wav tagging
+audio tagging AudioSet	lgotarra/Research-Audio-classification-using-Audioset-Freesound-Databases	1	NONE	2019-04-07	Python	false	Final degree project based on task 2 from DCASE Challenge 2018. The goal is understanding 
+audio tagging AudioSet	arceushui/FYP-Audioset-Tagging	0	NONE	2021-06-06	Python	false	This is my NTU FYP Project
+audio tagging AudioSet	xwshi/audioset_tagging_cn	0	MIT	2021-09-23	Python	false	
+audio tagging AudioSet	backblaze-b2-samples/panns-audioset-tagging	0	MIT	2026-11-13	TypeScript	false	Full-stack sample app that tags audio locally with PANNs — 527 AudioSet labels plus a 2048
+audio tagging AudioSet	youthtec9966-yan/audioset_tagging_cnn-master	0	MIT	2026-09-23	Python	false	闻声识别项目
+YAMNet audio classification	trinhtuanvubk/tflite-yamnet-audio-classification	9	NONE	2023-04-30	Python	false	Yamnet model using tflite_model_maker with esc-50 dataset
+YAMNet audio classification	sami-hatna66/yamnet	5	NONE	2025-05-19	Python	false	PyTorch implementation of YAMNet model for audio classification
+YAMNet audio classification	Choise-ieee/yamnet_onnx_cpp_audio_speech_classification	5	NONE	2025-10-08	C++	false	Yamnet for speech classification using CPP and ONNX-runtime-2025高通边缘智能创新应用大赛入围决赛方案
+YAMNet audio classification	chrisjz/yamnet	3	Apache-2.0	2024-08-18	Python	false	An audio event classification API using the YAMNet model
+YAMNet audio classification	JaspreetSingh-exe/Music-Genre-Classification	3	MIT	2025-02-15	Jupyter Notebook	false	This project builds a Music Genre Classification System using SVM, CNN, LSTM, and Transfor
+YAMNet audio classification	vsnupoudel/Audio-Classification--transfer-learning-and-fine-tuning--Android-application	2	NONE	2022-03-03	Jupyter Notebook	false	Developing a application and/or website for snore detection using DeepLearning 
+YAMNet audio classification	aabhiyann/audio-classification-cnn	2	NONE	2025-12-23	Jupyter Notebook	false	CNN-based audio classification pipeline built on mel-spectrograms. Includes a minimal base
+YAMNet audio classification	HiruDewmi/Audio-Classification-for-Elephant-Sounds	2	NONE	2025-11-19	Jupyter Notebook	false	This repository contains the code and datasets for our study on classifying elephant vocal
+YAMNet audio classification	thealper2/YAMNet-Audio-Classification	1	NONE	2024-01-06	Jupyter Notebook	false	Cat-Dog Audio Classification using YAMNet
+YAMNet audio classification	haroon423/audio-classification-yamnet	1	NONE	2025-05-16	Jupyter Notebook	false	
+PANNs audio tagging	zilliz-bootcamp/audio_search	30	MIT	2021-08-10	Python	false	This project use PANNs for audio tagging and sound event detection, and finally get audio 
+PANNs audio tagging	KonNik88/audio-similarity-tagging-hub	1	MIT	2026-02-27	Jupyter Notebook	false	Universal audio embeddings + tagging + similarity search with Streamlit demo and FastAPI; 
+PANNs audio tagging	dennech/reaper-audio-tag	1	NONE	2026-11-17	Lua	false	Local ONNX PANNs audio tagging for REAPER with ReaPack install, first-run model download, 
+PANNs audio tagging	backblaze-b2-samples/panns-audioset-tagging	0	MIT	2026-11-13	TypeScript	false	Full-stack sample app that tags audio locally with PANNs — 527 AudioSet labels plus a 2048
+PANNs audio tagging	Pakorn-Yaothong/pann	0	NONE	2025-07-01	TypeScript	false	Pretrained audio neural networks (PANNs) for audio pattern recognition on AudioSet, includ
+PANNs audio tagging	StefanoGiacomelli/epanns_inference	0	MIT	2024-06-16	Python	false	Repository for E-PANN audio tagging w. Cnn14 0.5-pruned model
+PANNs audio tagging	BhavyaGajjarapu/Audio-Intelligence-System-for-Search-and-Retrieval	0	NONE	2025-09-01	Python	false	A modular audio processing pipeline that standardizes audio files, transcribes speech with
+face tracking vertical crop mediapipe video	hector-ai-91/video-podcast-clipper	14	MIT	2026-10-14	Python	false	Your long-form video → viral vertical clips. Face-tracked smart crop, 8-dim neuro-engageme
+video deduplication near duplicate perceptual hash	backblaze-b2-samples/videohash-deduplication	1	MIT	2026-11-13	TypeScript	false	Perceptual video deduplication on Backblaze B2: hash a video library with videohash, clust
+video deduplication near duplicate perceptual hash	pansiyi/findeverything	0	NONE	2026-06-07	Python	false	FindEverything is a Gradio-based desktop app for video/image deduplication and semantic se
+CLIP video frame embeddings search	DewduSendanayake/Video-Similarity-Search	5	NONE	2025-12-22	Python	false	A video similarity pipeline extracting frame embeddings using OpenAI’s CLIP model and aggr
+CLIP video frame embeddings search	Padraigobrien08/Stepwise	3	MIT	2026-10-21	Python	false	Multimodal RAG that turns tutorial videos into a searchable, visually-grounded knowledge b
+CLIP video frame embeddings search	ZeppyClown/Video-Frame-Deduplication-Similarity-Search-using-CLIP	1	NONE	2025-09-03	Python	false	This project builds a machine learning system that can automatically clean, organize, and 
+CLIP video frame embeddings search	mryan-3/clipseek	1	NONE	2026-09-01	TypeScript	false	ClipSeek is a local semantic video search application. It allows users to search through v
+CLIP video frame embeddings search	ANNASBlackHat/Footage-Engine	1	NONE	2026-10-24	Python	false	A modular, standalone Python engine for ingesting video and image footage across multiple 
+CLIP video frame embeddings search	Shivamyadav2006/assignment-2-find-a-way-to-retrieve-video-from	1	NONE	2026-03-03	Python	false	Video Retrieval System that finds the best matching 2–3 sec video from a database using ei
+CLIP video frame embeddings search	Harshitha006/EchoFrame	0	NONE	2026-08-29	Python	false	Built a multimodal video search engine that combines CLIP visual embeddings and CLAP audio
+CLIP video frame embeddings search	bomberbug/semantic-video-search	0	NONE	2026-09-04	Python	false	Natural-language video search over 1.5K MSR-VTT clips. Frozen CLIP frame embeddings in FAI
+CLIP video frame embeddings search	Mounusha25/video_rag	0	MIT	2026-10-19	Python	false	Semantic video search fusing CLIP visual, Whisper transcript, and EasyOCR text embeddings 
+CLIP video frame embeddings search	Ayushcodesatgithub/vli-video-project	0	NONE	2026-04-22	Python	false	A semantic video retrieval system using CLIP and FAISS that allows users to search video c
+smart reframe speaker tracking active speaker detection	srimathi4109/incubrix-active-speaker-reframing	0	NONE	2026-09-21	Python	false	CPU-first Python pipeline for active speaker detection and smart video reframing using aud
+twitch chat highlight clip detection	teseo/twitch-toolkit	3	MIT	2026-01-31	TypeScript	false	Streaming toolkit: VOD highlight detection, chat bot with AI personality, clip extraction
+twitch chat highlight clip detection	AlexanderPatsukov/NekoClipper	0	AGPL-3.0	2026-11-16	Python	false	free AI stream clipper: turns Twitch & YouTube VODs into vertical Shorts, TikTok and Reels
+videotoolbox hardware accelerated ffmpeg apple silicon	VseyadCraft/shorts-conveyor	0	NONE	2026-11-03	Python	false	⚡ Hardware-accelerated vertical video rendering engine on Apple Silicon (FFmpeg VideoToolb
+videotoolbox hardware accelerated ffmpeg apple silicon	enxmp/movie-harbor	0	MIT	2026-09-28	Rust	false	Your library, lighter. Hardware-accelerated movie conversion for Windows and Apple Silicon
+videotoolbox hardware accelerated ffmpeg apple silicon	sunhiro/vcompress	0	MIT	2026-11-17	Python	false	Smart hardware-accelerated video compression engine with Binary Search CRF tuning & Netfli
+mlx whisper apple silicon	ARahim3/mlx-tune	1474	Apache-2.0	2026-06-23	Python	false	Fine-tune LLMs on your Mac with Apple Silicon. SFT, DPO, GRPO, Vision, TTS, STT, Embedding
+mlx whisper apple silicon	mustafaaljadery/lightning-whisper-mlx	957	NONE	2024-05-08	Python	false	An extremely fast implementation of whisper optimized for Apple Silicon using MLX. 
+mlx whisper apple silicon	Knuckles92/OpenWhisper	276	MIT	2026-11-15	Python	false	Local dictation and meeting notes with Whisper or the OpenAI API. Custom Whisper models, M
+mlx whisper apple silicon	chayapats/oliv	110	MIT	2026-11-04	Swift	false	Thai + English voice typing for Mac. Offline speech-to-text that types Thai-spoken tech wo
+mlx whisper apple silicon	anvanvan/mac-whisper-speedtest	49	MIT	2025-08-04	Makefile	false	Compare different Whisper implementations optimized for Apple Silicon
+mlx whisper apple silicon	dolphin-creator/VideoContext-Engine	39	NONE	2025-12-04	Python	false	Local Video RAG Engine. A FastAPI microservice for video understanding: Scene Detection + 
+mlx whisper apple silicon	rock74710/TypelessMLX	34	NONE	2026-11-05	Swift	false	macOS 語音聽寫 App — MLX Whisper + Breeze-ASR-25，完全離線，Apple Silicon 最佳化
+mlx whisper apple silicon	madeye/subtitle_anywhere	31	MIT	2026-07-07	Python	false	Batch-generate bilingual external subtitles for local media files using MLX Whisper on App
+mlx whisper apple silicon	axot/OpenSuperMLX	28	MIT	2026-11-17	Swift	false	macOS app for real-time audio transcription powered by MLX on Apple Silicon
+mlx whisper apple silicon	sushilk1991/velora	21	MIT	2026-11-17	Swift	false	Free, local-first, on-device dictation for macOS (Apple Silicon). Hold a key, speak, and V
+whisper.cpp	ggml-org/whisper.cpp	55272	MIT	2026-11-17	C++	false	Port of OpenAI's Whisper model in C/C++
+whisper.cpp	VocaHQ/vocalinux	1029	AGPL-3.0	2026-11-17	Python	false	Free, open-source, 100% offline voice dictation for Linux. Speak and type anywhere via whi
+whisper.cpp	tazz4843/whisper-rs	942	Unlicense	2025-07-30	Rust	true	Rust bindings to https://github.com/ggerganov/whisper.cpp
+whisper.cpp	ardanlabs/kronk	868	Apache-2.0	2026-11-17	Go	false	Go With Your Own Intelligence! Use Go for hardware accelerated local inference with llama.
+whisper.cpp	mybigday/whisper.rn	810	MIT	2026-11-17	TypeScript	false	React Native binding of whisper.cpp.
+whisper.cpp	Macoron/whisper.unity	762	MIT	2025-04-17	C#	false	Running speech to text model (whisper.cpp) in Unity3d on your local machine.
+whisper.cpp	CodeWithKyrian/whisper.php	408	MIT	2025-12-11	PHP	false	Local Speech to Text in PHP made easy thanks to Whisper.cpp and OpenAI
+whisper.cpp	absadiki/pywhispercpp	351	MIT	2026-08-22	Python	false	Python bindings for whisper.cpp
+whisper.cpp	aarnphm/whispercpp	343	Apache-2.0	2024-12-08	C++	false	Pybind11 bindings for Whisper.cpp
+whisper.cpp	remotion-dev/template-tiktok	308	NONE	2026-11-09	TypeScript	false	Generate TikTok-style captions with Whisper.cpp
+TalkNet active speaker	TaoRuijie/TalkNet-ASD	520	MIT	2023-10-23	Python	false	ACM MM 2021: 'Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual 
+TalkNet active speaker	Jiang-Yidi/TS-TalkNet	63	NONE	2023-05-29	Python	false	INTERSPEECH2023: Target Active Speaker Detection with Audio-visual Cues
+TalkNet active speaker	MjdMahasneh/active-speaker-detection	8	NONE	2025-05-03	Python	false	Detect and highlight active speakers in videos using YOLO for face detection and TalkNet f
+TalkNet active speaker	nawta/TalkNet-ASD_py3.9	0	MIT	2026-10-06	Python	true	ACM MM 2021: 'Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual 
+TalkNet active speaker	nawta/TalkNet-ASD-py312	0	MIT	2026-10-06	Python	false	TalkNet active speaker detection (ACM MM 2021) updated for Python 3.12 and PyTorch 2, runn
+TalkNet active speaker	Youssef-Sabri/dark-phoenix	0	MIT	2026-09-24	Python	false	Automated AI video clipper: WhisperX transcription, Gemini highlight detection, TalkNet ac

@@ -7,7 +7,7 @@ name = "clipagent"
 version = "0.1.0"
 description = "Local TikTok clip agent for authorized videos"
 requires-python = ">=3.11"
-dependencies = ["typer", "faster-whisper"]
+dependencies = ["typer", "faster-whisper", "numpy", "scenedetect>=0.7.3,<0.8", "opencv-python>=5.1"]
 
 [project.optional-dependencies]
 dev = ["pytest"]

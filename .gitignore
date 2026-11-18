@@ -42,3 +42,16 @@ source_library/
 logs/
 sourcevideo/*
 !sourcevideo/.gitkeep
+
+# /make-clips and the zero-touch service (runtime data at the project root; never committed)
+/approved/*
+!/approved/.gitkeep
+/needs-review/*
+!/needs-review/.gitkeep
+/quarantine/
+/ready-to-post/
+/service/
+/STOP
+/config/service.json
+/models/
+/tests/fixtures/_cache/

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>CLIPAGENT_ROOT</key>
+		<string>/Users/sam01/Documents/tiktok-clip-agent</string>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+		<key>PYTHONPATH</key>
+		<string>/Users/sam01/Documents/tiktok-clip-agent/src</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.clipagent.service</string>
+	<key>Nice</key>
+	<integer>10</integer>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/sam01/Documents/tiktok-clip-agent/.venv/bin/python</string>
+		<string>-m</string>
+		<string>clipagent.cli</string>
+		<string>service</string>
+		<string>run</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/sam01/Documents/tiktok-clip-agent/logs/service.stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/sam01/Documents/tiktok-clip-agent/logs/service.stdout.log</string>
+	<key>ThrottleInterval</key>
+	<integer>30</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/sam01/Documents/tiktok-clip-agent</string>
+</dict>
+</plist>

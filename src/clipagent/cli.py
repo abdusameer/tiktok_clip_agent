@@ -713,5 +713,54 @@ def purge_source(source_id: str = typer.Argument(...),
         raise typer.Exit(code=1)
 
 
+
+
+@app.command("make-clips")
+def make_clips_cmd(source: Path = typer.Option(None, "--source", help="A video file, a folder, or omit to process everything in sourcevideo/"),
+                   content_type: str = typer.Option("auto", "--content-type", help="auto | streamer | gaming | movie | show | podcast | interview"),
+                   platform: str = typer.Option("tiktok", "--platform"),
+                   rights: str = typer.Option(None, "--rights", help="Rights status for the source, e.g. 'owned: my own footage' or 'licensed: <details>'. Required for movie/show."),
+                   reviews: Path = typer.Option(None, "--reviews", help="Agent review file (candidates/reviews.json format); omitted candidates get the deterministic auto review"),
+                   until: str = typer.Option("qa", "--until", help="analysis | candidates | review-pack | passes | render | qa"),
+                   force: bool = typer.Option(False, "--force", help="Redo cached analysis"),
+                   model: str = typer.Option("small.en", "--model", help="Whisper model for the full-source transcript pass")) -> None:
+    """Autonomous local clipping of authorized long-form media into ranking and standalone TikTok videos (nothing is uploaded or published)."""
+    from .clips import CONTENT_TYPES, pipeline
+    from .clips.common import ClipsError, RightsMissing
+    if content_type != "auto" and content_type not in CONTENT_TYPES:
+        typer.echo(f"Unknown content type {content_type!r}; use auto or one of {', '.join(CONTENT_TYPES)}", err=True)
+        raise typer.Exit(code=1)
+    try:
+        videos = pipeline.find_sources(source)
+    except ClipsError as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(code=1)
+    if not videos:
+        typer.echo("Nothing to process: put the video (and its audio, if separate) in sourcevideo/ or pass --source", err=True)
+        raise typer.Exit(code=1)
+    code, total, review_n = 0, 0, 0
+    for v in videos:
+        try:
+            r = pipeline.process(v, content_type, platform, rights=rights, reviews=reviews, until=until, force=force, model=model, echo=typer.echo)
+        except RightsMissing as exc:
+            typer.echo(f"STOP - {exc}", err=True)
+            code = 2
+            continue
+        except ClipsError as exc:
+            typer.echo(f"Error for {v.name}: {exc}", err=True)
+            code = code or 1
+            continue
+        if r.get("stopped"):
+            code = 2
+        total += len(r["approved"])
+        review_n += len(r["needs_review"])
+    typer.echo(f"FINAL VIDEOS APPROVED: {total}   needs-review: {review_n}")
+    raise typer.Exit(code=code)
+
+
+from .service.cli import app as service_app  # noqa: E402  (additive: `clipagent service ...`)
+app.add_typer(service_app, name="service")
+
+
 if __name__ == "__main__":
     app()

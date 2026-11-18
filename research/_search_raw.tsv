@@ -1,0 +1,138 @@
+automatic video clipping highlights	random-or/shorts-clipper	3	MIT	2026-07-13	Python	false	AI-powered video clipping pipeline that scouts trending content, extracts highlights, gene
+automatic video clipping highlights	metaleey/AI-auto-segment-edit-video-pipeline	3	NONE	2026-03-09	Python	false	🤖 AI-powered automatic video segment editing pipeline.  Automatically detect highlights, a
+automatic video clipping highlights	MASTER870-CMD/ai-video-clipper	1	MIT	2026-10-20	Python	false	AI Video Clipper — Automatically turn long videos into engaging short clips for YouTube Sh
+automatic video clipping highlights	Fariz23zoi/zoi-ai-clipper	1	MIT	2026-11-13	Python	false	An AI-powered video clipping agent that transforms long-form videos into engaging short-fo
+automatic video clipping highlights	abhinandmv/AI-Clipper-and-Caption-Generator	0	MIT	2025-10-29	TypeScript	false	An AI-driven video clipping and captioning system that automatically detects highlights, t
+automatic video clipping highlights	gfilicetti/video-highlights-with-gemini	0	Apache-2.0	2026-04-16	Python	false	This repo is a demo for various forms of AI enabled automatic highlighting and clipping us
+automatic video clipping highlights	doaneruby970-hub/video-clipper	0	NONE	2026-07-08	Python	false	AI-powered automatic video highlight clipping - news/football/replica analyzer
+automatic video clipping highlights	Nati1429/video-clipper-ai	0	MIT	2026-08-03	-	false	An open source , AI -powered clipping tool that automatically detects ,highlights , and cr
+automatic video clipping highlights	pasiegel/game-highlights-generator	0	NONE	2026-01-24	Python	false	A Python-based automation tool that downloads specific segments from YouTube videos and as
+automatic video clipping highlights	rai2009p/clipflop	0	NONE	2026-10-03	HTML	false	Free clipping tools for all, by uploading video links or mp4 file this tool will automatic
+automatic video clipping highlights	lordending04-alt/idm-smartclip-ai-skill	0	NONE	2026-11-12	-	false	IDM SmartClip AI Claude Skill – Development guidelines for building an AI-powered video cl
+automatic video clipping highlights	arshithaManaf7034/InsightVault	0	NONE	2026-06-23	TypeScript	false	InsightVault is an AI-powered video intelligence platform that transforms long-form speech
+stream highlight detection twitch	artkulak/twitch-stream-highlights-detection	59	Unlicense	2021-05-26	Python	false	Detect highlights from Twitch streams in real time with Machine Learning!
+stream highlight detection twitch	Avnsx/twitch-stream	56	MIT	2025-06-25	Python	false	Automatic Twitch stream recorder and downloader with real-time VOD capture and streamer su
+stream highlight detection twitch	kiy0ni/auto-video-editor	11	MIT	2026-10-26	Python	false	Turn long streams and VODs into highlight reels and captioned TikTok/Shorts automatically.
+stream highlight detection twitch	teseo/twitch-toolkit	3	MIT	2026-01-31	TypeScript	false	Streaming toolkit: VOD highlight detection, chat bot with AI personality, clip extraction
+stream highlight detection twitch	YunZhuHuang327/Twitch-Stream-Highlight-Detection	1	NONE	2026-02-28	Python	false	A machine learning system that detects highlight moments in Twitch livestreams by analyzin
+stream highlight detection twitch	onurozkir/stream-sentry	0	MIT	2026-10-18	TypeScript	false	Real-time live stream highlight clipping platform: AI viral moment detection, 9:16 reframi
+stream highlight detection twitch	AlexanderPatsukov/NekoClipper	0	AGPL-3.0	2026-11-16	Python	false	free AI stream clipper: turns Twitch & YouTube VODs into vertical Shorts, TikTok and Reels
+stream highlight detection twitch	Rynkwng/AI-clipping-model	0	NONE	2025-11-10	HTML	false	An AI-powered Twitch clipping automation system that monitors live streams in real-time, a
+scene detection movie shot boundary	angadbawa/Movie-Semantic-Search	4	MIT	2025-12-30	Python	false	The project aims to segment scenes in movies using a mulitimodality framework that combine
+shot boundary detection	soCzech/TransNetV2	1083	MIT	2023-12-04	Python	false	TransNet V2: Shot Boundary Detection Neural Network
+shot boundary detection	UVA-Computer-Vision-Lab/OmniShotCut	354	MIT	2026-11-01	Python	false	OmniShotCut is a sensitive and more informative SoTA on Shot Boundary Detection task. (Neu
+shot boundary detection	wentaozhu/AutoShot	267	MIT	2023-04-18	Python	false	AutoShot: A Short Video Dataset and State-of-the-Art Shot Boundary Detection - CVPR NAS 20
+shot boundary detection	Tangshitao/ClipShots	129	MIT	2021-11-09	Python	false	ClipShots is the first large-scale dataset for shot boundary detection collected from Yout
+shot boundary detection	melgharib/DSBD	68	NONE	2020-10-09	MATLAB	false	Large-scale, Fast and Accurate Shot Boundary Detection through Spatio-temporal Convolution
+shot boundary detection	abramjos/Scene-boundary-detection	62	NONE	2019-09-02	Python	false	Implementation of the paper 'Ridiculously Fast Shot Boundary Detection with Fully Convolut
+shot boundary detection	yasinyildirim/ShotDetection	49	LGPL-2.1	2018-07-12	C++	false	Open source software that detects shot boundaries in video.
+shot boundary detection	SaeidDadkhah/Shot-Boundary-Detection	38	NONE	2016-10-28	Python	false	Shot boundary detection (SBD) python program: Internship (Summer 2016) project
+shot boundary detection	shallwe999/TransNetV2-SBD-Visualize	30	MIT	2020-12-05	Python	false	A simple GUI to show shot boundary detection based on TransNet V2.
+shot boundary detection	MaxReimann/Shot-Boundary-Detection	26	NONE	2015-10-21	C++	false	
+shot boundary detection	HeliosZhao/Shot-Boundary-Detection	15	NONE	2019-08-03	Python	false	
+shot boundary detection	rsomani95/shot-boundary-detection	11	NONE	2019-12-27	Jupyter Notebook	false	There's a good amount of literature on shot boundary detection, and there's a multitude of
+semantic video search clip	6v17/VideoSeek	124	AGPL-3.0	2026-11-17	Python	false	Offline video material retrieval platform for semantic search, subtitle search, Agent API,
+semantic video search clip	GhostPeony/clip-finder	57	MIT	2026-07-02	Python	false	AI-powered YouTube search. Index any channel, playlist, or video and search through transc
+semantic video search clip	Praveen-301/Surveillance-Video-Analysis	9	NONE	2026-05-07	Python	false	ulti-modal AI surveillance pipeline for real-time threat detection, action recognition, an
+semantic video search clip	KarunyaChavan/Semantixel-Semantic_Image_Retrieval	6	MIT	2026-07-09	Python	false	Stop scrolling. Start searching smarter. With Semantixel, discover the exact image or vide
+semantic video search clip	Davegdd/Semantic-video-search	4	MIT	2023-02-13	Python	false	Search a scene in a video using natural language with X-CLIP
+semantic video search clip	MaGinMP/localphotos	3	Apache-2.0	2026-07-30	Python	false	Your own Google Photos, running entirely on your Mac. Local-first photo & video library wi
+semantic video search clip	tamchamchi/semantic-search	2	NONE	2025-10-23	Jupyter Notebook	false	Semantic video retrieval system using CLIP-based embeddings and FAISS vector search for fa
+semantic video search clip	backblaze-b2-samples/personal-video-ai-search	2	MIT	2026-11-13	TypeScript	false	AI-powered semantic search over your personal video archive on Backblaze B2. Indexes every
+semantic video search clip	gurleenkaurmalhotra115-jpg/jump-to-this	2	NONE	2026-08-31	Python	false	A lightweight dual-embedding video moment search engine. Indexes video frames and transcri
+semantic video search clip	hareshanmuhan/semantic-search	1	NONE	2026-03-08	Python	false	Search 1M+ images/videos with natural language — OpenAI CLIP + FAISS + FastAPI + Streamlit
+semantic video search clip	zyc2pi/eagle-video-semantic-search	1	MIT	2026-11-06	JavaScript	false	Eagle 视频语义搜索插件：用中英文描述、图片或画面帧在素材库中找镜头，结果精确到场景时间段；支持反馈检索、时序搜索与主题仓库，推理本地运行
+semantic video search clip	KadirCanCelik/semantic-video-search	1	MIT	2026-02-22	Python	false	AI-powered Semantic Video Search Engine 🎬. Search inside videos using natural language que
+multimodal video understanding	QwenLM/Qwen2.5-Omni	4097	Apache-2.0	2025-06-12	Jupyter Notebook	false	Qwen2.5-Omni is an end-to-end multimodal model by Qwen team at Alibaba Cloud, capable of u
+multimodal video understanding	OpenGVLab/InternVideo	2420	Apache-2.0	2026-07-02	Python	false	[ECCV2024] Video Foundation Models & Data for Multimodal Understanding
+multimodal video understanding	TIGER-AI-Lab/TheoremExplainAgent	1514	MIT	2025-07-27	Python	false	Official Repo for "TheoremExplainAgent: Towards Video-based Multimodal Explanations for LL
+multimodal video understanding	bytedance/Lance	1370	Apache-2.0	2026-07-14	Python	false	A 3B-active-parameter native unified multimodal model for image and video understanding, g
+multimodal video understanding	DAMO-NLP-SG/VideoLLaMA3	1191	Apache-2.0	2025-08-14	Jupyter Notebook	false	Frontier Multimodal Foundation Models for Image and Video Understanding
+multimodal video understanding	1038lab/ComfyUI-QwenVL	931	GPL-3.0	2026-09-14	Python	false	ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL,
+multimodal video understanding	OpenMOSS/MOSS-VL	835	Apache-2.0	2026-10-14	C++	false	An open-weight 11B model series for long-form and real-time video understanding
+multimodal video understanding	bytedance/vidi	663	NOASSERTION	2026-08-03	Python	false	The official repo for "Vidi: Large Multimodal Models for Video Understanding and Editing"
+multimodal video understanding	ictnlp/LLaVA-Mini	573	Apache-2.0	2025-06-29	Python	false	LLaVA-Mini is a unified large multimodal model (LMM) that can support the understanding of
+multimodal video understanding	RenShuhuai-Andy/TimeChat	428	BSD-3-Clause	2025-05-08	Python	false	[CVPR 2024] TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Unde
+multimodal video understanding	microsoft/UniVL	365	MIT	2024-07-25	Python	true	An official implementation for " UniVL: A Unified Video and Language Pre-Training Model fo
+multimodal video understanding	boheumd/MA-LMM	355	MIT	2024-07-19	Python	false	(2024CVPR) MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understandi
+word level timestamps whisper	m-bain/whisperX	25424	BSD-2-Clause	2026-11-12	Python	false	WhisperX:  Automatic Speech Recognition with Word-level Timestamps (& Diarization)
+word level timestamps whisper	linto-ai/whisper-timestamped	2862	AGPL-3.0	2026-09-28	Python	false	Multilingual Automatic Speech Recognition with word-level timestamps and confidence
+word level timestamps whisper	nyrahealth/CrisperWhisper	1494	NOASSERTION	2026-11-11	Python	false	Controllable Transcription. Verbatim ( every, filler, pause, stutter, vocal sound) , or in
+word level timestamps whisper	jim60105/docker-whisperX	460	MIT	2026-11-15	Dockerfile	false	Dockerfile for WhisperX: Automatic Speech Recognition with Word-Level Timestamps and Speak
+word level timestamps whisper	nomadkaraoke/python-lyrics-transcriber	93	MIT	2026-01-19	Python	true	Automatically create synchronised lyrics files in ASS and LRC with word-level timestamps, 
+word level timestamps whisper	fluxions-ai/whisperdrz	48	MIT	2026-11-04	Python	false	WhisperDRZ: a Whisper-large-v3 fine-tune that transcribes, diarizes (who said what), predi
+word level timestamps whisper	kzkhykw/AlwaysWhisper	46	NOASSERTION	2026-10-29	Python	false	Local-Whisper transcription and stylish burned-in captions (word-level timestamps, Japanes
+word level timestamps whisper	NeuralFalconYT/Auto-Subtitle-Generator-Free	15	MIT	2026-04-19	Python	false	A free and open-source tool that automatically generates subtitles from any audio or video
+word level timestamps whisper	ibrahimqureshae/whisperx-transcriber	12	MIT	2026-10-27	Python	false	Offline AI transcription for Windows. Word-level timestamps. No cloud. No subscription. Fr
+word level timestamps whisper	Azooz-AI/WhisperX-Docker-API	11	NONE	2025-06-18	Python	false	WhisperX:  Automatic Speech Recognition with Word-level Timestamps (& Diarization) with Do
+word level timestamps whisper	hwdsl2/whisper-install	11	NOASSERTION	2026-11-18	Python	false	Whisper speech-to-text server installer for Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS
+word level timestamps whisper	tainguyen07/whisper-subtitle	7	MIT	2026-08-21	Python	false	Automatic subtitle generator built on OpenAI Whisper: batched transcription, VAD chunking,
+speaker diarization	Zackriya-Solutions/meetily	32776	MIT	2026-11-14	Rust	false	Privacy-first AI meeting note taker for Windows, macOS and Linux. Free, open source (MIT).
+speaker diarization	modelscope/FunASR	21061	MIT	2026-11-17	Python	false	Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctu
+speaker diarization	k2-fsa/sherpa-onnx	16007	Apache-2.0	2026-11-17	C++	false	Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation
+speaker diarization	QuentinFuxa/WhisperLiveKit	11258	Apache-2.0	2026-11-14	Python	false	Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and 
+speaker diarization	pyannote/pyannote-audio	10808	MIT	2026-11-17	Jupyter Notebook	false	Neural building blocks for speaker diarization: speech activity detection, speaker change 
+speaker diarization	MahmoudAshraf97/whisper-diarization	5677	BSD-2-Clause	2026-08-15	Jupyter Notebook	false	Automatic Speech Recognition with Speaker Diarization based on OpenAI Whisper
+speaker diarization	FluidInference/FluidAudio	3305	Apache-2.0	2026-11-17	Swift	false	Frontier CoreML audio models in your apps — text-to-speech, speech-to-text, voice activity
+speaker diarization	modelscope/3D-Speaker	3219	Apache-2.0	2025-12-08	Python	false	A Repository for Single- and Multi-modal Speaker Verification, Speaker Recognition and Spe
+speaker diarization	OpenMOSS/MOSS-Transcribe-Diarize	2282	Apache-2.0	2026-10-21	Python	false	A 0.9B model for long-form transcription in 50+ languages with speaker diarization, timest
+speaker diarization	wq2012/awesome-diarization	1918	Apache-2.0	2026-10-26	-	false	A curated list of awesome Speaker Diarization papers, libraries, datasets, and other resou
+speaker diarization	google/uis-rnn	1589	Apache-2.0	2024-09-25	Python	true	This is the library for the Unbounded Interleaved-State Recurrent Neural Network (UIS-RNN)
+speaker diarization	wenet-e2e/wespeaker	1472	Apache-2.0	2026-09-22	Python	false	Research and Production Oriented Speaker Verification, Recognition and Diarization Toolkit
+vertical video reframing 9:16 face tracking	SiGSelby/ai-vertical-video-cropper	0	NONE	2026-06-10	Python	false	An Ai-driven video reframing tool that tracks faces in widescreen footage and crops them i
+vertical video reframing 9:16 face tracking	Touseeq20/Reelify	0	NONE	2026-05-04	Python	false	AI-powered video reframing tool that converts 16:9 podcast videos into 9:16 vertical conte
+vertical video reframing 9:16 face tracking	filipopov/ai-clipper	0	NONE	2026-10-27	HTML	false	Cliphook — turns long videos into ready-to-post vertical clips: Whisper transcription, Cla
+duplicate scene detection video	sakthivelj/video2image	9	CC0-1.0	2026-08-02	Python	false	Video2Image is a Python desktop GUI for extracting frames from single or multiple video fi
+duplicate scene detection video	thecodingcamel/watch-video	3	MIT	2026-07-11	Python	false	Give any AI eyes for video. 4 intelligent modes: 40x faster keyframe skim, scene-aware, de
+duplicate scene detection video	andreisminsk/alpine-zoom-sar	1	NOASSERTION	2026-10-06	Python	false	Alpine Zoom - search-and-rescue video processing toolkit to help rescuers review stabilize
+ffmpeg video rendering python pipeline	wangxin6x/AutoVideo-Agent	89	MIT	2026-08-26	Python	false	Agent-friendly Markdown-to-video automation pipeline with reproducible rendering and plugg
+ffmpeg video rendering python pipeline	CarlAmine/AI_Editor	7	MIT	2026-06-03	TypeScript	false	AI assisted video editing pipeline | scene analysis, LLM edit planning, ffmpeg rendering, 
+ffmpeg video rendering python pipeline	lZXGl/Video-Processing-Pipeline	3	MIT	2026-09-20	Python	false	Automated CLI pipeline for video trimming, FFmpeg GPU transcoding, animated captions, and 
+ffmpeg video rendering python pipeline	CosmoJelly/short-form-video-generator	2	MIT	2026-05-27	Python	false	An automated pipeline that generates short-form videos — AI narration, auto-subtitles, and
+ffmpeg video rendering python pipeline	SurathDurgaprasad/wildverse-ai-video-pipeline	1	NOASSERTION	2026-09-02	Python	false	Automated educational video production pipeline combining LLM-generated dialogue, determin
+ffmpeg video rendering python pipeline	9ckobn/video-conveyor	1	NONE	2026-08-11	Python	false	Automated short-video pipeline: Whisper transcription, LLM clip selection, FFmpeg renderin
+ffmpeg video rendering python pipeline	yaseenmahdi/ai-video-production-pipeline	1	NONE	2026-09-15	Python	false	Config-driven AI video production pipeline for research, scripting, media generation, Remo
+ffmpeg video rendering python pipeline	HishamKhan1/youtube-automation-pipeline	1	MIT	2026-10-22	Python	false	Modular Python pipeline for generating long-form YouTube videos with AI story generation, 
+ffmpeg video rendering python pipeline	Manvi0b/skygrid-auto-editor	1	NONE	2026-04-23	Python	false	Modular Python video editing pipeline with plugin-based analyzers, beat-synced music, and 
+ffmpeg video rendering python pipeline	zafarsuliman/Clipfarm	1	MIT	2026-10-06	Python	false	Local-first Python pipeline for semantic video discovery, editorial composition and valida
+ffmpeg video rendering python pipeline	iice257/TikTok-Lyric-Video-Pipeline	1	MIT	2026-11-15	Python	false	An automated Python pipeline for generating 10 to 15 TikTok-ready lyric videos per day fro
+ffmpeg video rendering python pipeline	carlosmassaa/AI-Multimedia-Automation-Toolkit	1	NONE	2026-08-26	Python	false	Modular Python pipeline & toolkit for AI video production: Whisper STT, Gemini LLM/TTS, mu
+long video summarization llm	nbonamy/youtube-tldw	6	MIT	2024-01-10	Python	false	YouTube - Too Long; Didn't Watch
+long video summarization llm	Troyanovsky/LLM_Summarizer	4	NONE	2023-06-27	HTML	false	Use LLM and Whisper to summarize long text and audio/video
+long video summarization llm	anaskasasbeh/whisper-youtube-summarizer	2	MIT	2026-10-19	Python	false	Turn a YouTube video into a transcript plus English and Arabic summaries with Whisper and 
+long video summarization llm	AASTHASINGH1402/Youtube-Question-Answer-and-Summarization-using-LLM.	1	NONE	2025-08-10	Jupyter Notebook	false	Created a Streamlit web app that processes YouTube video transcripts for Q\\&A and summariz
+long video summarization llm	M-YasirGhaffar/youtube-video-summarizer-using-gemini-api	1	NONE	2026-05-06	TypeScript	false	Summarize hours long Youtube videos with this full stack application using gemini-1.5-flas
+long video summarization llm	Shehjad2019/whisper-youtube-summarizer-groq	1	NONE	2025-12-11	Python	false	YouTube & URL summarizer using Whisper (audio→text), yt-dlp, LangChain, and Groq Llama mod
+long video summarization llm	lee-agi/any2summary	1	NONE	2026-05-23	Python	false	any2summary is a command-line toolkit that handles the entire pipeline for podcasts, video
+long video summarization llm	ExpertKT/vidsum	1	MIT	2026-10-08	Python	false	Long video -> transcript + chaptered summary + phone-friendly report. No ffmpeg required. 
+long video summarization llm	monaznaushad811-del/VIDEO_AGENT-	1	MIT	2026-06-21	Python	false	Built an AI powered Video & Meeting Assistant using RAG and LLMs that summarizes YouTube v
+long video summarization llm	fahad329/YouTube-Video-and-Webpage-Content-Summarizer	1	GPL-3.0	2025-12-26	Python	false	📺 WebLens AI: YouTube & Web Content Summarizer WebLens AI is a Generative AI-powered tool 
+long video summarization llm	elayaadi/edge-video-summarization	0	NONE	2026-08-28	Python	false	Finds the moments matching a natural-language prompt in a long video and exports a short s
+long video summarization llm	CodeMystique13/Youtube-Video-and-Website-URL-Content-Summarization	0	NONE	2026-04-26	Jupyter Notebook	false	Generative AI-based application that summarizes content from YouTube videos and web URLs. 
+podcast clip generator shorts	kleZ799/clipmint	50	MIT	2026-11-16	Python	false	Free, open-source AI clip generator and Opus Clip alternative. Turns podcasts, vlogs, tuto
+podcast clip generator shorts	kirat11X/video--clipper-vizard-AI-replica-automatic-short-form-clip-generator-	21	MIT	2026-11-04	Python	false	video-clipper is an end-to-end, fully local system that automatically converts long-form v
+podcast clip generator shorts	jnk8fvtxdq-dotcom/viral-clip-maker	1	NONE	2025-12-21	Python	false	AI-powered podcast clip generator that detects emotional moments using Claude AI, extracts
+podcast clip generator shorts	rajeshguntupalli59/ClipProfitAI-	0	NONE	2026-05-22	Python	false	AI shorts generator that ranks clips by viral + revenue potential for creators and podcast
+podcast clip generator shorts	agnibha-paul/Highlights-Clip-Generator	0	NONE	2026-07-25	Python	false	Auto-generate highlight clips from gameplay/sports/podcast videos using audio energy + Whi
+podcast clip generator shorts	josesosa11/socialclip-studio	0	NONE	2026-11-15	-	false	AI clip generator with one flat monthly price, no credits. Turn long YouTube, Twitch, Kick
+opus clip alternative open source	Anil-matcha/AI-Youtube-Shorts-Generator	6197	MIT	2026-11-12	Python	false	Open-source alternative to Opus Clip, Vidyo.ai, Klap & SubMagic. Turn long-form YouTube vi
+opus clip alternative open source	xixihhhh/hotclip	478	AGPL-3.0	2026-10-26	TypeScript	false	免费开源的 AI 剪辑 / 直播切片工具:长视频、直播回放、播客一键切成爆款竖屏短视频,直发抖音/快手/B站/小红书/视频号——AI 找高光金句、弹幕热度进爆点判断、自动加字幕、横
+opus clip alternative open source	ColinGPT9/clips-studio	308	AGPL-3.0	2026-11-17	Python	false	Clips Kitty: Free open-source AI video clipper. Local Opus Clip alternative (also Klap & V
+opus clip alternative open source	Shaitrish/37studio	167	MIT	2026-11-14	Go	false	Open-source AI alternative to Buffer and Opus Clip: Claude Code makes on-brand videos, pos
+opus clip alternative open source	fralapo/clippyme	67	MIT	2026-10-14	Python	false	✂️ Open-source, self-hosted Opus Clip alternative. Turn long YouTube videos or uploads int
+opus clip alternative open source	kleZ799/clipmint	50	MIT	2026-11-16	Python	false	Free, open-source AI clip generator and Opus Clip alternative. Turns podcasts, vlogs, tuto
+opus clip alternative open source	Anil-matcha/ai-clipping-comfyui	40	MIT	2026-07-21	Python	false	Free open-source Opus Clip alternative for ComfyUI — AI video clipping nodes that turn lon
+opus clip alternative open source	WhiteTowerAI/cut-as-code	34	MIT	2026-11-05	JavaScript	false	Open-source agentic video editing skills — an AI-powered alternative to Opus Clip and CapC
+opus clip alternative open source	GrepCut/OpenClipper	20	MIT	2026-11-07	TypeScript	false	Open-source, local-first Opus Clip alternative for desktop. Turn long videos and podcasts 
+opus clip alternative open source	thealiraza2/CapShorts	19	MIT	2026-09-28	TypeScript	false	⚡ The Free, Open-Source AI Video Editor & Auto Subtitle Suite. Local-first alternative to 
+opus clip alternative open source	atherion005-byte/agent-opus	15	MIT	2026-04-29	Python	false	Free, local, open-source Opus Clip alternative. GPU-accelerated · Animated captions · Face
+opus clip alternative open source	RealAdii/clipper-skill	12	MIT	2026-11-13	Python	false	Claude Code skill that turns podcasts, interviews and X broadcasts into post-ready short c
+emotion recognition video reaction	naveenaks/Video-Emotion-Recognition	5	NONE	2021-02-06	Python	false	Facial expressions play an important role in identifying the emotional state of an individ
+emotion recognition video reaction	manoshiraha19/Emotion-Recognition-for-Mental-Healthcare	2	NONE	2023-04-02	-	false	Mental healthcare has become a prevailing need in the current state of society. To be able
+emotion recognition video reaction	hammad464/Emotion-Detection	0	MIT	2026-08-03	Python	false	🎭 Real-time facial emotion recognition app built with Python, OpenCV, and FER. Analyzes we
+audio tagging yamnet panns	KonNik88/audio-similarity-tagging-hub	1	MIT	2026-02-27	Jupyter Notebook	false	Universal audio embeddings + tagging + similarity search with Streamlit demo and FastAPI; 
+video highlight detection transformer	YoucanBaby/MH-DETR	23	NONE	2024-07-30	Python	false	[IJCNN 2024] MH-DETR: Video Moment and Highlight Detection with Cross-modal Transformer
+video highlight detection transformer	Skyline-9/Visionary-Vids	17	NOASSERTION	2024-05-23	Jupyter Notebook	false	Multi-modal transformer approach for natural language query based joint video summarizatio
+video highlight detection transformer	yeliudev/UMT	7	NONE	2022-03-26	-	false	🎬 UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Det
+video highlight detection transformer	danielolafisoye/Deep-Learning-Soccer-Highlights	0	NONE	2026-05-19	Python	false	Transformer based soccer highlight detection system using SoccerHigh VideoMAE features for
+video highlight detection transformer	shouryank/Deepfake-Detection-with-Vision-Transformers	0	NONE	2025-05-30	Python	false	This project detects deepfake videos using transformer-based models and attention mechanis

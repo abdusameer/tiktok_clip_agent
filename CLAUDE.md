@@ -21,3 +21,7 @@ Do not install or modify anything yet. Only inspect and report.
 - Profanity stays uncensored unless I request otherwise.
 - Public publishing always requires my explicit approval.
 - `/deleteandcleanup <run-id>` previews, then (only on the exact phrase `DELETE RUN <run-id>`) moves a completed run's working files to the Trash and keeps the final MP4 under `finals/`; the procedure lives in its skill.
+## Clipping agent and zero-touch service
+- `/make-clips` (`.claude/skills/make-clips/SKILL.md`, `docs/make-clips.md`) clips authorized long-form media (streamer, gaming, movie, show, podcast, interview) into `approved/{rankings,standalone}/`; it never uploads or publishes and stops (exit 2) when a movie/show has no rights status.
+- `clipagent service ...` (`docs/zero-touch-service.md`) is the continuous, storage-safe service. It uses official TikTok APIs only: default `PRIVATE_OR_DRAFT_QUEUE`; `COMPLIANT_DIRECT_POST` only with a recorded audit, consent and attested UX flow. It ships in dry-run; real uploads and purges need `"dry_run": false` in `config/service.json`. Emergency stop: create `STOP` in the project root.
+- Editorial policy stays only in `CONTENT_EDITING_RULES.md`.

@@ -1,0 +1,15 @@
+movie scene clipper shorts [sort=updated p1]	tuyoleni/clipper	0	NONE	2026-08-25	TypeScript	false	Upload a movie, AI finds viral-worthy moments, export them as 9:16 Reels. It analyzes vide
+vertical reframe face tracking ffmpeg opencv [sort=updated p1]	filipopov/ai-clipper	0	NONE	2026-10-27	HTML	false	Cliphook — turns long videos into ready-to-post vertical clips: Whisper transcription, Cla
+vertical reframe face tracking ffmpeg opencv [sort=updated p1]	chris-setyawan/ai-clipper	0	NOASSERTION	2026-09-28	HTML	false	Turns long podcasts into short-form clips. Scores moments by discourse structure, tracks f
+vertical reframe face tracking ffmpeg opencv [sort=updated p1]	calvinbasumatary-cpu/AI-YouTube-Shorts-Generator	0	NONE	2026-08-03	-	false	An AI-powered YouTube Shorts Generator that transforms long-form videos into viral vertica
+laughter detection audio [sort=updated p1]	supriya-kotturu/humor-me	0	AGPL-3.0	2026-11-16	Jupyter Notebook	false	A voice-only stand-up comedy agent that reads the room through audience laughter and picks
+laughter detection audio [sort=updated p1]	Das-rebel/arxiv_endorsement_request_chuckle	0	NONE	2026-06-21	-	false	Public verification log of arxiv endorsement request for Audio-First Laughter Detection pa
+laughter detection audio [sort=updated p1]	DavidMendelovits/laughter-detection	1	NONE	2026-04-28	Python	false	Detect laughter in video/audio files and output timestamped JSON results
+laughter detection audio [sort=updated p1]	taranewang/Chinese-Stand-up-Comedy-Creation-and-Analysis-System	0	NONE	2026-04-23	Python	false	This system is designed for stand-up comedy creation and review, integrating AI joke gener
+laughter detection audio [sort=updated p1]	MackeeDG/Project-Laughter	1	NONE	2025-08-08	Jupyter Notebook	false	Audio-based laughter detection using MFCC features and deep learning (CNN & LSTM) trained 
+laughter detection audio [sort=updated p1]	zoghlami-khalil/laughter-detection	1	NONE	2024-04-23	Python	false	Enrich audio transcriptions by accurately identifying and marking instances of laughter.
+laughter detection audio [sort=updated p1]	LasseWolter/laughter-detection-icsi	4	MIT	2023-01-29	Jupyter Notebook	false	A ML-pipeline for training a laughter detection model on the ICSI corpus
+laughter detection audio [sort=updated p1]	aalok-sathe/dvt-laughter-id	1	NONE	2019-06-20	Python	false	a toolkit for neural and spectrographical audio analysis of digital media with example usa
+shot boundary detection pytorch [sort=updated p1]	shubhang191/automatic-shot-boundary-detection	0	NONE	2026-11-04	Python	false	Windows CPU shot-boundary detection with TinyCut S, AutoShot, OmniShotCut, learned Python 
+shot boundary detection pytorch [sort=updated p1]	ntq05/TransNetV2_Pytorch	0	NONE	2026-07-16	Python	false	A fast PyTorch implementation of TransNetV2 for Shot Boundary Detection, optimized with FF
+shot boundary detection pytorch [sort=updated p1]	sung0471/PyTorch_SBD	2	MIT	2020-07-24	Python	false	Shot Boundary Detection Using 3D CNN
