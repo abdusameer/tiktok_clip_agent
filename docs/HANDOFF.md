@@ -1,6 +1,6 @@
 # Handoff: everything learned so far (2026-11-17 to 2026-11-18)
 
-Written so a fresh session on another machine can continue without this laptop. Branch: `feature/make-clips` (base `main`). **Nothing is enabled, uploaded or deleted.** The service ships in dry-run.
+Written so a fresh session on another machine can continue without this laptop. **Moving to the Windows PC? Read sections 2, 2b (port plan) and 2c (everything to download/install/copy) first.** Branch: `feature/make-clips` (base `main`). **Nothing is enabled, uploaded or deleted.** The service ships in dry-run.
 
 ## 1. Where things stand
 | Area | State |
@@ -57,6 +57,77 @@ Verified facts are marked (verified); everything else is my inference and must b
 **Probably fine:** PySceneDetect, OpenCV, YuNet (ONNX), NumPy, SQLite WAL, typer, onnxruntime (VAD). `requirements.lock` is a macOS freeze: install `faster-whisper`, `ctranslate2`, `scenedetect`, `opencv-python`, `numpy`, `typer`, `onnxruntime` fresh on Windows and re-freeze to `requirements-windows.lock`.
 
 **Suggested order on the PC:** (1) clone, venv, install; (2) fix the `fcntl` import and fonts/Pillow so the CLI and renderer run; (3) run the unit tests; (4) enable CUDA and run `scripts/benchmark.py`; (5) port the fixture TTS and run the e2e test; (6) port tokens/scheduler/OCR; (7) only then the service. The full Windows port is a real chunk of work; ask me to do it in that order.
+
+## 2c. Everything to download, install, create or bring over (Windows 11 PC)
+(verified) = measured/read on the laptop or from source; (check) = my inference, confirm on the PC. Nothing here has been run on Windows yet.
+
+### A. Accounts and credentials (not downloads; you must create or approve them)
+| Item | Needed for | Notes |
+|---|---|---|
+| GitHub access to `abdusameer/tiktok_clip_agent` | cloning | public repo; push needs your login (`gh auth login` or a credential manager) |
+| TikTok developer app (client key + client secret) | official delivery and metrics | create at developers.tiktok.com; request scopes `user.info.basic`, `video.upload`, `video.list` (and `video.publish` only for an audited Direct Post app); **register the redirect URI `http://localhost:8765/callback`** (or change `tiktok.redirect_uri` in `config/service.json`); the secret goes into Windows Credential Manager via `service set-client`, never into a file |
+| TikTok creator consent | OAuth | you click "Authorize" in your own browser once (`service auth`); nobody can do this for you |
+| TikTok app audit (optional) | public Direct Post | without it TikTok limits API posts to private; the service then uses the draft/inbox queue |
+| Anthropic / Claude Code login | running the agent on the PC | the agent review step is what makes visual judgements |
+| Higgsfield login (optional) | the old generation/draft workflows | `higgsfield auth login`; not used by `/make-clips` or the service |
+| Hugging Face account | **not needed** | the Whisper models I used are public; no token was required |
+
+### B. Software to install
+| Software | Version used / needed | Why | Notes |
+|---|---|---|---|
+| Git for Windows | any current | clone/push | the laptop has git 2.54 |
+| Python **3.12 (64-bit)** | project needs >= 3.11; tested on 3.12.15 | everything | tick "Add python.exe to PATH"; create the venv with `py -3.12 -m venv .venv` |
+| FFmpeg **(full build incl. libx264 and aac)** | laptop: 9.0.2 | all video work | e.g. `winget install Gyan.FFmpeg`; then check `ffmpeg -encoders | findstr x264` and `ffprobe -version` (check) |
+| NVIDIA driver | latest that supports CUDA 12 | GPU transcription | RTX 2070 Super is Turing (fp16 capable) (check) |
+| cuBLAS for CUDA 12 + cuDNN 9 | CUDA 12 / cuDNN 9 (verified from the faster-whisper README: ctranslate2 4.x supports only these) | `device="cuda"` | easiest on Windows: the DLL archive from `Purfview/whisper-standalone-win` release tag `libs`, unpacked into a folder on `PATH` (verified as the README's Windows route); or NVIDIA's own installers |
+| Microsoft Visual C++ Redistributable 2015-2022 (x64) | current | native wheels (onnxruntime, ctranslate2, opencv) | usually already present (check) |
+| Node.js LTS | laptop has v26 | Claude Code and Higgsfield CLI are npm packages | only if you use them |
+| Claude Code | npm package `@anthropic-ai/claude-code` (verified name) | run the agent | or Anthropic's current Windows installer; follow their docs |
+| Higgsfield CLI (optional) | `@higgsfield/cli` 1.1.26 (verified) | old generation workflows | `npm install -g @higgsfield/cli` (inferred from the package name) |
+| GitHub CLI `gh` (optional) | laptop 2.104 | auth/PRs | `winget install GitHub.cli` |
+| PowerShell 7 / Windows Terminal (optional) | n/a | nicer shell | the shell scripts (`scripts/install.sh`) are zsh: **write a `scripts/install.ps1`** on the PC |
+
+### C. Python packages (fresh install; do NOT reuse `requirements.lock`, it is a macOS freeze)
+Installed on the laptop (verified from `requirements.lock`): `faster-whisper==1.2.1`, `ctranslate2==4.8.2`, `onnxruntime==1.31.0`, `av==19.0.1`, `tokenizers==0.23.3`, `huggingface_hub==2.2.0`, `numpy==2.5.4`, `scenedetect==0.7.3`, `opencv-python==5.1.0.95`, `typer==0.27.3`, `click==8.5.0`, `rich==15.0.0`, `pytest==9.1.1`, `yt-dlp==2026.8.19` (old pipeline only; `/make-clips` never downloads anything), plus their dependencies. Re-freeze on the PC as `requirements-windows.lock`.
+**Extra packages the Windows port needs** (not installed on the laptop): `pillow` (the venv has none today), `keyring` (Credential Manager tokens), `portalocker` (replaces `fcntl`), `pyttsx3` or PowerShell SAPI (fixture speech), an OCR option (`rapidocr-onnxruntime`, `winocr`, or Tesseract; see 2b). `pip install -e .` registers the `clipagent` package (`pyproject.toml` now lists scenedetect and opencv-python). One of `opencv-python` vs `opencv-python-headless` only: PySceneDetect declares `opencv-python`.
+
+### D. Model and data files to download
+| File | Size | Where from / how |
+|---|---|---|
+| Whisper `Systran/faster-whisper-small.en` | **484 MB** (verified, `model.bin`) | auto-downloaded to the Hugging Face cache on first use (`%USERPROFILE%\.cache\huggingface\hub`; set `HF_HOME` to relocate) |
+| Whisper `Systran/faster-whisper-medium.en` | **1.53 GB** (verified) | same; used for the two caption decodes |
+| Optional larger model for the GPU (e.g. `large-v3`) | roughly 3 GB (check) | only if you want to try it; `.en` models are English-only, a multilingual model needs code changes for the caption decodes |
+| YuNet face detector `face_detection_yunet_2023mar.onnx` | 232,589 bytes (verified) | https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx to `models/yunet/`; SHA-256 must be `8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4`; license in `licenses/YuNet-LICENSE.txt` (MIT, tracked in git) |
+Disk for all of the above: venv about 0.3 GB on the laptop (verified; larger with CUDA libs), models about 2 GB, plus your media.
+
+### E. Things to copy from the laptop (NOT in git)
+| What | Size (verified) | Needed? |
+|---|---|---|
+| `source_library/` (your source media: two compilations of 828 s and 1036 s with transcripts/analysis, plus one loose compilation `.mp4`) | 716 MB | only if you want to keep working on those sources; `source_library/_tools/ocr2` is a macOS binary: do not copy |
+| `approved_clips/` (finished videos from the original pipeline) | 304 MB | keep as your archive |
+| `runs/` (original pipeline run folders) | 59 MB | optional |
+| `registry/*.json` (used-clip and export registry) | 196 KB | **already in git**: it stops reusing moments |
+| `ready-for-drafts/`, `finals/`, `analytics/` | n/a | copy if non-empty (all gitignored) |
+| Claude Code memory notes: `~/.claude/projects/-Users-sam01-Documents-tiktok-clip-agent/memory/` (5 small files) | KBs | not in git. Three of them are reproduced in this handoff; **the two older ones are not**: "pending TikTok draft uploads" (nine Higgsfield videos plus captions waiting for draft space) and "funny is the only bar" (already encoded in `CONTENT_EDITING_RULES.md`). Copy the folder if you want the first one |
+| `config/service.json` | n/a | on the laptop it is the untouched default; just re-run `clipagent service init` on the PC |
+Use a USB drive, an external disk or a cloud folder for media; do not put media in git (`.gitignore` blocks `*.mp4`, `*.mov`, `*.jpg`, `*.png`).
+
+### F. Configure on the PC before first run
+1. `config/ranking_style.json`: `fonts.bold` -> `C:\Windows\Fonts\arialbd.ttf`, `fonts.black` -> `C:\Windows\Fonts\ariblk.ttf`, `fonts.renderer_python` -> the venv's `python.exe` (needs Pillow).
+2. Environment variables: `CLIPAGENT_ROOT` = the project folder (the service and workers use it); optionally `HF_HOME` (model cache location), `CLIPAGENT_DEVICE=cuda` once the device switch from 2b is implemented.
+3. `clipagent service init`, then edit `config/service.json` (streamer, game/topic, ceilings, slots, `gate.visual_safety`).
+4. Antivirus: consider excluding the project and cache folders from real-time scanning; first reads of large files were very slow on the laptop (check whether Windows Defender does the same).
+5. Power settings: disable sleep so the always-on service really runs.
+
+### G. Smoke tests after installing (expected results)
+```
+ffmpeg -version                     # 9.x or current, with libx264 listed in: ffmpeg -encoders
+nvidia-smi                          # shows the RTX 2070 Super and a driver that supports CUDA 12
+python -c "import ctranslate2; print(ctranslate2.get_cuda_device_count())"     # expect 1 (check)
+python -c "import cv2, scenedetect, faster_whisper; print('ok')"
+python -m pytest tests -q --ignore=tests/test_clips_e2e.py       # laptop: 368 passed, 1 skipped, 1 known flaky failure
+```
+Expect more failures on Windows until the 2b fixes are done (fonts, `fcntl`, OCR, `say`).
 
 ## 3. Decisions made and why
 * **Hybrid architecture**: ffmpeg + faster-whisper + PySceneDetect + OpenCV/YuNet as foundations; editorial logic, passes, QA and renderer are original. Rejected: AGPL clippers (copyleft), unlicensed repos, whisperX/pyannote (torch stack, telemetry, gated tokens), MediaPipe (heavier than YuNet for one job), TransNetV2 (stale; PySceneDetect 0.7 embeds a TransNetV2 detector), PANNs (pinned to torch 1.0.1), ClipsAI (stale since 2024), AI-Youtube-Shorts-Generator (paid cloud API default).
